@@ -4,10 +4,10 @@ require_once('./api/flight_functions.php');
 // Parse filter parameters
 $airline = $_GET['airline'] ?? null;
 $date = $_GET['date'] ?? date('Y-m-d');
-$minDelayDep = $_GET['minDelayDep'] ?? null;
-$maxDelayDep = $_GET['maxDelayDep'] ?? null;
-$minDelayArr = $_GET['minDelayArr'] ?? null;
-$maxDelayArr = $_GET['maxDelayArr'] ?? null;
+$minDelayDep = $_GET['minDelayDep'] ?? '';  // Replace null with an empty string
+$maxDelayDep = $_GET['maxDelayDep'] ?? '';  // Replace null with an empty string
+$minDelayArr = $_GET['minDelayArr'] ?? '';  // Replace null with an empty string
+$maxDelayArr = $_GET['maxDelayArr'] ?? '';  // Replace null with an empty string
 
 // Get flight schedules based on filters
 $flightSchedules = getFlightSchedules($airline, $date, $minDelayDep, $maxDelayDep, $minDelayArr, $maxDelayArr);
