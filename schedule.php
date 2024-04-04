@@ -2,7 +2,7 @@
 require_once('./api/flight_functions.php');
 
 // Parse filter parameters
-$airline = $_GET['airline'] ?? null;
+$airline = $_GET['airline'] ?? '';
 $date = $_GET['date'] ?? date('Y-m-d');
 $minDelayDep = $_GET['minDelayDep'] ?? '';  // Replace null with an empty string
 $maxDelayDep = $_GET['maxDelayDep'] ?? '';  // Replace null with an empty string
