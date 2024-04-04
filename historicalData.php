@@ -3,9 +3,9 @@
 require_once('./api/flight_functions.php');
 
 // Initialize variables
-$flightNumber = $_GET['flightNumber'] ?? null;
-$airline = $_GET['airline'] ?? null;
-$date = $_GET['date'] ?? null;
+$flightNumber = $_GET['flightNumber'] ?? '';
+$airline = $_GET['airline'] ?? '';
+$date = $_GET['date'] ?? '';
 
 // Fetch historical flight data based on filters
 $historicalFlightData = historical($airline, $date, $flightNumber);
